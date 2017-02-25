@@ -40,14 +40,16 @@ router.get('/add', (req, res, next) => {
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
 
-    //* ADD CODE HERE * let newBook = book({
+    //* ADD CODE HERE *
+
+    //reference objects to book attributes
     let newBook = book({
       "Title": req.body.title,
       "Price": req.body.price,
       "Author": req.body.author,
       "Genre": req.body.genre
     });
-
+//create error lookup
       book.create(newBook, (err,book ) => {
       if(err) {
         console.log(err);
@@ -97,7 +99,7 @@ router.post('/:id', (req, res, next) => {
      * ADD CODE HERE *
      *****************/
     let id = req.params.id;
-// 
+// create update instance book after changes 
      let updatedBooks = book({
        "_id": id,
       "Title": req.body.title,
@@ -105,7 +107,7 @@ router.post('/:id', (req, res, next) => {
       "Author": req.body.author,
       "Genre": req.body.genre
     });
-
+//update after changes
     book.update({_id: id}, updatedBooks, (err) => {
       if(err) {
         console.log(err);
