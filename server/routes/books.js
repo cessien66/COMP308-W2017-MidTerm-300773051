@@ -77,7 +77,7 @@ router.get('/:id', (req, res, next) => {
           // show the game details view
           res.render('books/details', {
               title: 'Book Details',
-              books: books,
+              books: books
               
           });
         }
