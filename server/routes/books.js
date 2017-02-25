@@ -26,11 +26,19 @@ router.get('/', (req, res, next) => {
 //  GET the Book Details page in order to add a new Book
 router.get('/add', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
-
+     // ADD CODE HERE *
+     
+  res.render('views/books/details.ejs', {
+    title: 'About',
+    books: ''
+   });
 });
+
+
+module.exports = router;
+    
+
+
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
