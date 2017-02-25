@@ -27,11 +27,11 @@ router.get('/', (req, res, next) => {
 router.get('/add', (req, res, next) => {
 
      // ADD CODE HERE *
-     //  res.render('service', { title: 'Contact ' });
+    
      
  res.render('books/details', {
     title: "Add Book",
-    books: '',
+    books: ''
     
   });
 });
